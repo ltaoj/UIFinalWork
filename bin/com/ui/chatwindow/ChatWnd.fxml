@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bdpane_root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.chatwindow.ChatController">
+   <left>
+      <HBox fx:id="hbox_left" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vbox_leftbar" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #3e3e40;">
+               <children>
+                  <VBox fx:id="vbox_above" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50;">
+                           <children>
+                              <ImageView id="iv_head" fx:id="iv_head" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <ImageView id="iv_tab_friend" fx:id="iv_tab_friend" fitHeight="30.0" fitWidth="30.0" focusTraversable="true" layoutX="10.0" layoutY="10.0" onMouseClicked="#friendIVAction" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <ImageView id="iv_tab_dialog" fx:id="iv_tab_dialog" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#dialogIVAction" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <ImageView id="iv_tab_space" fx:id="iv_tab_space" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#spaceIVAction" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox_below" alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <ImageView id="iv_setting" fx:id="iv_setting" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <StackPane fx:id="stack_tabs_list" prefHeight="200.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="vbox_space_list" prefHeight="200.0" prefWidth="250.0" visible="false" />
+                  <VBox fx:id="vbox_dialog_list" prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0" spacing="10.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <children>
+                              <TextField prefHeight="25.0" prefWidth="160.0" promptText="搜索" />
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_add_friend" />
+                           </children>
+                        </HBox>
+                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <ListView fx:id="lv_dialog" prefHeight="500.0" prefWidth="250.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox_friend_list" prefHeight="200.0" prefWidth="250.0" visible="false">
+                     <children>
+                        <HBox fx:id="hbox_search" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="tf_search" prefHeight="25.0" prefWidth="160.0" promptText="搜索" />
+                              <ImageView fx:id="iv_add_friend" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_add_friend" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <ListView fx:id="lv_friends" prefHeight="500.0" prefWidth="250.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <StackPane prefHeight="200.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="bdpane_space" prefHeight="200.0" prefWidth="550.0" visible="false">
+               <center>
+                  <ListView fx:id="lv_messages" prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <StackPane prefHeight="50.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="hbox_title_space" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="550.0">
+                           <children>
+                              <ImageView fx:id="iv_window_min" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#minIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_min" />
+                              <ImageView fx:id="iv_window_max" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#maxIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_max" />
+                              <ImageView fx:id="iv_window_exit" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#exitIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_exit" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="李涛江" />
+                     </children>
+                  </StackPane>
+               </top>
+            </BorderPane>
+            <BorderPane fx:id="bdpane_dialog" prefHeight="200.0" prefWidth="550.0">
+               <bottom>
+                  <BorderPane fx:id="bdpane_input2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <bottom>
+                        <HBox fx:id="hbox_operates" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="发送" />
+                              <ImageView id="iv_heart" fx:id="iv_heart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TextArea id="ta_input" fx:id="ta_input" prefColumnCount="20" prefHeight="100.0" prefRowCount="20" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <HBox fx:id="hbox_options" prefHeight="30.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="iv_font" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_font" />
+                              <ImageView fx:id="iv_emoticon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_emoticon" />
+                              <ImageView fx:id="iv_file" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_file" />
+                              <ImageView fx:id="iv_screenshot" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_screenshot" />
+                              <ImageView fx:id="iv_videochat" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_videochat" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <ListView fx:id="lv_messages2" prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <StackPane prefHeight="50.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="hbox_title_dialog" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="550.0">
+                           <children>
+                              <ImageView fx:id="iv_window_min" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#minIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_min" />
+                              <ImageView fx:id="iv_window_max" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#maxIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_max" />
+                              <ImageView fx:id="iv_window_exit" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#exitIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_exit" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="正在与李涛江聊天" />
+                     </children>
+                  </StackPane>
+               </top>
+            </BorderPane>
+            <BorderPane fx:id="bdpane_friend" prefHeight="200.0" prefWidth="550.0" visible="false">
+               <bottom>
+                  <BorderPane fx:id="bdpane_input" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <bottom>
+                        <HBox fx:id="hbox_operates" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="发送" />
+                              <ImageView id="iv_heart" fx:id="iv_heart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TextArea id="ta_input" fx:id="ta_input" prefColumnCount="20" prefHeight="100.0" prefRowCount="20" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <HBox fx:id="hbox_options" prefHeight="30.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="iv_font" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_font" />
+                              <ImageView fx:id="iv_emoticon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_emoticon" />
+                              <ImageView fx:id="iv_file" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_file" />
+                              <ImageView fx:id="iv_screenshot" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_screenshot" />
+                              <ImageView fx:id="iv_videochat" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_videochat" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <ListView fx:id="lv_messages" prefHeight="350.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <StackPane prefHeight="50.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="hbox_title_friend" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="550.0">
+                           <children>
+                              <ImageView fx:id="iv_window_min" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#minIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_min" />
+                              <ImageView fx:id="iv_window_max" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#maxIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_max" />
+                              <ImageView fx:id="iv_window_exit" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#exitIVAction" pickOnBounds="true" preserveRatio="true" styleClass="iv_window_exit" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="李涛江" />
+                     </children>
+                  </StackPane>
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

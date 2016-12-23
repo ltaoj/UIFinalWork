@@ -1,0 +1,104 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*设置左边Tab页5个图片正常和点击状态下的样式 */
+#iv_head{
+	-fx-opacity: 1;
+}
+#iv_head:hover{
+	-fx-opacity: 0.8;
+}
+/*#iv_tab_dialog{
+	-fx-image:url(/res/tab_dialog_normal.png)
+}
+#iv_tab_dialog:hover{
+	-fx-image:url(/res/tab_dialog_pressed.png)
+}
+#iv_tab_space{
+	-fx-image:url(/res/tab_space_normal.png)
+}
+#iv_tab_space:hover{
+	-fx-image:url(/res/tab_space_pressed.png)
+}*/
+#iv_setting{
+	-fx-image:url(/res/setting_normal.png)
+}
+#iv_setting:hover{
+	-fx-image:url(/res/setting_pressed.png)
+}
+.iv_add_friend{
+	-fx-image: url(/res/add_friend_normal.png)
+}
+.iv_add_friend:hover{
+	-fx-image: url(/res/add_friend_pressed.png)
+}
+.iv_window_exit{
+	-fx-image: url(/res/window_exit_normal.png)
+}
+.iv_window_exit:hover{
+	-fx-image: url(/res/window_exit_pressed.png);
+}
+.iv_window_max{
+	-fx-image: url(/res/window_max_normal.png)
+}
+.iv_window_max:hover{
+	-fx-image: url(/res/window_max_pressed.png);
+}
+.iv_window_min{
+	-fx-image: url(/res/window_min_normal.png)
+}
+.iv_window_min:hover{
+	-fx-image: url(/res/window_min_pressed.png);
+}
+#bt_send{
+	-fx-background-color: rgb(245,245,245);
+	-fx-text-fill: rgb(89,89,89);
+	-fx-border-color:rgb(89,89,89);
+	-fx-border-width: 0.1px;
+}
+#bt_send:hover{
+	-fx-background-color: rgb(18,150,219);
+	-fx-text-fill: rgb(255,255,255);
+	-fx-border-color: rgb(18,150,219);
+}
+#iv_heart{
+	-fx-image: url(/res/small_heart.png);
+}
+#iv_heart:hover{
+	-fx-image: url(/res/big_heart.png);
+}
+/*设置消息工具栏图标 */
+.iv_font{
+	-fx-image: url(/res/font_normal.png)
+}
+.iv_font:hover{
+	-fx-image: url(/res/font_pressed.png);
+}
+.iv_emoticon{
+	-fx-image: url(/res/emoticon_normal.png)
+}
+.iv_emoticon:hover{
+	-fx-image: url(/res/emoticon_pressed.png);
+}
+.iv_file{
+	-fx-image: url(/res/file_normal.png)
+}
+.iv_file:hover{
+	-fx-image: url(/res/file_pressed.png);
+}
+.iv_screenshot{
+	-fx-image: url(/res/screenshot_normal.png)
+}
+.iv_screenshot:hover{
+	-fx-image: url(/res/screenshot_pressed.png);
+}
+.iv_videochat{
+	-fx-image: url(/res/videochat_normal.png)
+}
+.iv_videochat:hover{
+	-fx-image: url(/res/videochat_pressed.png);
+}
+/*设置输入框的样式 */
+#ta_input{
+	-fx-font-size: 15px;
+	-fx-cursor: e-resize;
+	-fx-effect: dropshadow(GAUSSIAN,rgba(255,255,255,1),0,0,0,0);
+}
