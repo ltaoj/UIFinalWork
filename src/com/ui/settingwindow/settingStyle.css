@@ -1,0 +1,66 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#border_root{
+	-fx-border-color: #898989 #898989 #898989 #898989;
+	-fx-border-width: 0 1 1 1;
+}
+#hbox_titlebar{
+	-fx-background-color: rgb(89,89,89);
+}
+#lb_title{
+	-fx-text-fill: rgb(255,255,255);
+	-fx-font-size: 15px;
+}
+#iv_exit{
+	-fx-image: url(/res/popup_exit_normal.png)
+}
+#iv_exit:hover{
+	-fx-image: url(/res/popup_exit_pressed.png)
+}
+#iv_min{
+	-fx-image: url(/res/popup_min_normal.png)
+}
+#iv_min:hover{
+	-fx-image: url(/res/popup_min_pressed.png)
+}
+/*.vbox_column{
+	-fx-border-color: #898989 #f5f5f5 #898989 #f5f5f5;
+	-fx-border-width: 0 0 2 0;
+}*/
+/*.vbox_column:hover{
+	-fx-border-color: #898989 #f5f5f5 #ffffff #f5f5f5;
+	-fx-border-width: 0 0 2 0;
+}*/
+#borderclick{
+	-fx-border-color: #898989 #f5f5f5 #ffffff #f5f5f5;
+	-fx-border-width: 0 0 2 0;
+}
+.bt_column{
+	-fx-background-color: rgb(245,245,245);
+	-fx-text-fill: rgb(89,89,89);
+	-fx-border-color:rgb(89,89,89);
+	-fx-border-width: 0px;
+}
+.bt_column:hover{
+	-fx-background-color: rgb(245,245,245);
+	-fx-text-fill: rgb(18,150,219);
+	-fx-border-color:rgb(137,137,137);
+	-fx-border-width: 1px;
+}
+#hbox_column{
+	-fx-border-color: #898989 #f5f5f5 #898989 #f5f5f5;
+	-fx-border-width: 0 0 2 0;
+}
+/*×ó±ßrow */
+.vbox_line{
+	-fx-background-insets: 0 4;
+	-fx-background-color: rgb(137,137,137);
+}
+/*.vbox_line:hover{
+	-fx-background-color: rgb(18,150,219);
+}*/
+.iv_slider_dot{
+	-fx-image: url(/res/slider_dot_normal.png)
+}
+/*.iv_slider_dot:hover{
+	-fx-image: url(/res/slider_dot_pressed.png)
+}*/

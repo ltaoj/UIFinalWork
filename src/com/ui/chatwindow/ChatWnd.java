@@ -120,6 +120,7 @@ public class ChatWnd extends Application {
 				}
 			}
 			Platform.setImplicitExit(false);
+			primaryStage.setResizable(true);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
 			primaryStage.setScene(scene);
 			primaryStage.show();

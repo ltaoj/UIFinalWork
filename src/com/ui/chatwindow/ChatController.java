@@ -3,7 +3,9 @@ package com.ui.chatwindow;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.ui.popupwindow.PopupWnd;
 import com.ui.resource.R;
+import com.ui.settingwindow.SettingWnd;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -16,6 +18,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class ChatController implements Initializable{
 
@@ -155,6 +158,11 @@ public class ChatController implements Initializable{
 		vbox_space_list.setVisible(true);
 		bdpane_space.setVisible(true);
 	}
+	// 点击设置
+	public void settingIVAction() throws Exception{
+		SettingWnd settingWnd = new SettingWnd();
+		settingWnd.start(new Stage());
+	}
 	// 点击最小化
 	public void minIVAction(){
 		ChatWnd.stage.hide();
@@ -185,5 +193,10 @@ public class ChatController implements Initializable{
 		bdpane_friend.setVisible(false);
 		bdpane_dialog.setVisible(false);
 		bdpane_space.setVisible(false);
+	}
+
+	public void sendBTAction(){
+		PopupWnd popupWnd = new PopupWnd();
+		popupWnd.start(new Stage());
 	}
 }

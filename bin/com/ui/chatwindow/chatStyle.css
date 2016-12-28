@@ -98,7 +98,20 @@
 }
 /*设置输入框的样式 */
 #ta_input{
+	/*-fx-padding: 0px;
+	-fx-background-insets: 0px;
+	-fx-border-width: 0px;*/
+	-fx-background-color: transparent;
+	/*-fx-control-inner-background: transparent;*/
 	-fx-font-size: 15px;
 	-fx-cursor: e-resize;
 	-fx-effect: dropshadow(GAUSSIAN,rgba(255,255,255,1),0,0,0,0);
+}
+/*设置ScrollPane样式 */
+.listview,.textfield{
+	-fx-background-color: transparent;
+}
+.textfield{
+	-fx-border-color: rgb(89,89,89);
+	-fx-border-width: 0.5px;
 }

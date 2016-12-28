@@ -1,0 +1,26 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* CSS for  the title bar */
+#border_titlebar{
+	-fx-background-color: rgb(89,89,89);
+}
+#lb_title{
+	-fx-text-fill: rgb(255,255,255);
+	-fx-font-size: 15px;
+}
+.iv_popup_exit{
+	-fx-image: url(/res/popup_exit_normal.png);
+}
+.iv_popup_exit:hover{
+	-fx-image: url(/res/popup_exit_pressed.png);
+}
+#bt_cancel{
+	-fx-background-color: rgb(245,245,245);
+	-fx-text-fill: rgb(89,89,89);
+	-fx-border-color:rgb(89,89,89);
+	-fx-border-width: 0.1px;
+}
+#bt_cancel:hover{
+	-fx-background-color: rgb(89,89,89);
+	-fx-text-fill: rgb(255,255,255);
+	-fx-border-color: rgb(18,150,219);
+}

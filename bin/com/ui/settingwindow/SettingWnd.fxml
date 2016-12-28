@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="border_root" fx:id="border_root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.settingwindow.SettingController">
+   <top>
+      <VBox prefHeight="100.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="hbox_titlebar" fx:id="hbox_titlebar" prefHeight="40.0" prefWidth="650.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="350.0">
+                     <children>
+                        <Label id="lb_title" prefHeight="50.0" text="设置">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView id="iv_min" fx:id="iv_min" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView id="iv_exit" fx:id="iv_exit" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox id="hbox_column" prefHeight="60.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="vbox_column1" alignment="CENTER" prefHeight="60.0" prefWidth="150.0" styleClass="vbox_column">
+                     <children>
+                        <Button fx:id="bt_column1" mnemonicParsing="false" onMouseClicked="#column1BTAction" prefHeight="30.0" prefWidth="80.0" styleClass="bt_column" text="基本设置" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox_column2" alignment="CENTER" prefHeight="60.0" prefWidth="150.0" styleClass="vbox_column">
+                     <children>
+                        <Button fx:id="bt_column2" mnemonicParsing="false" onMouseClicked="#column2BTAction" prefHeight="30.0" prefWidth="80.0" styleClass="bt_column" text="皮肤设置" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="350.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hbox_row11" onMouseClicked="#c1rowHBoxAction" prefHeight="100.0" prefWidth="50.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="40.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vbox_line1" alignment="CENTER" prefHeight="100.0" prefWidth="10.0" styleClass="vbox_line">
+                     <children>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_slider_dot" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox_row12" onMouseClicked="#c1rowHBoxAction" prefHeight="100.0" prefWidth="50.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="40.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vbox_line2" alignment="CENTER" prefHeight="100.0" prefWidth="10.0" styleClass="vbox_line">
+                     <children>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_slider_dot" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox_row13" onMouseClicked="#c1rowHBoxAction" prefHeight="100.0" prefWidth="50.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="40.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="vbox_line3" alignment="CENTER" prefHeight="100.0" prefWidth="10.0" styleClass="vbox_line">
+                     <children>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_slider_dot" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane prefHeight="350.0" prefWidth="650.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

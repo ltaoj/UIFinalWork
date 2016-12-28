@@ -57,7 +57,7 @@
                      <children>
                         <Pane prefHeight="50.0" prefWidth="50.0">
                            <children>
-                              <ImageView id="iv_setting" fx:id="iv_setting" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView id="iv_setting" fx:id="iv_setting" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#settingIVAction" pickOnBounds="true" preserveRatio="true">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -81,13 +81,13 @@
                               <Insets left="10.0" />
                            </padding>
                            <children>
-                              <TextField prefHeight="25.0" prefWidth="160.0" promptText="搜索" />
+                              <TextField prefHeight="25.0" prefWidth="160.0" promptText="搜索" styleClass="textfield" />
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_add_friend" />
                            </children>
                         </HBox>
-                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" styleClass="scrollpane_list" VBox.vgrow="ALWAYS">
                            <content>
-                              <ListView fx:id="lv_dialog" prefHeight="500.0" prefWidth="250.0" />
+                              <ListView id="lv_dialog" fx:id="lv_dialog" prefHeight="500.0" prefWidth="250.0" styleClass="listview" />
                            </content>
                         </ScrollPane>
                      </children>
@@ -96,16 +96,16 @@
                      <children>
                         <HBox fx:id="hbox_search" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0" spacing="10.0">
                            <children>
-                              <TextField fx:id="tf_search" prefHeight="25.0" prefWidth="160.0" promptText="搜索" />
+                              <TextField fx:id="tf_search" prefHeight="25.0" prefWidth="160.0" promptText="搜索" styleClass="textfield" />
                               <ImageView fx:id="iv_add_friend" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="iv_add_friend" />
                            </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
                         </HBox>
-                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                        <ScrollPane fx:id="scrollpane_list" fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="250.0" styleClass="scrollpane_list" VBox.vgrow="ALWAYS">
                            <content>
-                              <ListView fx:id="lv_friends" prefHeight="500.0" prefWidth="250.0" />
+                              <ListView id="lv_friends" fx:id="lv_friends" prefHeight="500.0" prefWidth="250.0" styleClass="listview" />
                            </content>
                         </ScrollPane>
                      </children>
@@ -120,7 +120,7 @@
          <children>
             <BorderPane fx:id="bdpane_space" prefHeight="200.0" prefWidth="550.0" visible="false">
                <center>
-                  <ListView fx:id="lv_messages" prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                  <ListView id="lv_messages" fx:id="lv_messages" prefHeight="300.0" prefWidth="200.0" styleClass="listview" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <StackPane prefHeight="50.0" prefWidth="550.0" BorderPane.alignment="CENTER">
@@ -142,11 +142,11 @@
             </BorderPane>
             <BorderPane fx:id="bdpane_dialog" prefHeight="200.0" prefWidth="550.0">
                <bottom>
-                  <BorderPane fx:id="bdpane_input2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <BorderPane fx:id="bdpane_input" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="bdpane_input" BorderPane.alignment="CENTER">
                      <bottom>
                         <HBox fx:id="hbox_operates" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="发送" />
+                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" onMouseClicked="#sendBTAction" prefHeight="30.0" prefWidth="80.0" text="发送" />
                               <ImageView id="iv_heart" fx:id="iv_heart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                            <padding>
@@ -174,7 +174,7 @@
                   </BorderPane>
                </bottom>
                <center>
-                  <ListView fx:id="lv_messages2" prefHeight="300.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                  <ListView id="lv_messages" fx:id="lv_messages" prefHeight="300.0" prefWidth="200.0" styleClass="listview" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <StackPane prefHeight="50.0" prefWidth="220.0" BorderPane.alignment="CENTER">
@@ -189,18 +189,18 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <Label text="正在与李涛江聊天" />
+                        <Label text="正在与Tony聊天" />
                      </children>
                   </StackPane>
                </top>
             </BorderPane>
             <BorderPane fx:id="bdpane_friend" prefHeight="200.0" prefWidth="550.0" visible="false">
                <bottom>
-                  <BorderPane fx:id="bdpane_input" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                  <BorderPane fx:id="bdpane_input" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="bdpane_input" BorderPane.alignment="CENTER">
                      <bottom>
                         <HBox fx:id="hbox_operates" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="发送" />
+                              <Button id="bt_send" fx:id="bt_send" mnemonicParsing="false" onMouseClicked="#sendBTAction" prefHeight="30.0" prefWidth="80.0" text="发送" />
                               <ImageView id="iv_heart" fx:id="iv_heart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                            <padding>
@@ -228,7 +228,7 @@
                   </BorderPane>
                </bottom>
                <center>
-                  <ListView fx:id="lv_messages" prefHeight="350.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                  <ListView id="lv_messages" fx:id="lv_messages" prefHeight="350.0" prefWidth="200.0" styleClass="listview" BorderPane.alignment="CENTER" />
                </center>
                <top>
                   <StackPane prefHeight="50.0" prefWidth="550.0" BorderPane.alignment="CENTER">
@@ -243,7 +243,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </HBox>
-                        <Label text="李涛江" />
+                        <Label text="Tony" />
                      </children>
                   </StackPane>
                </top>

@@ -14,6 +14,10 @@ public class R {
 	public static final String image_url_min_normal = "res/window_min_normal.png";
 	public static final String image_url_max_normal = "res/window_max_normal.png";
 	public static final String image_url_exit_normal = "res/window_exit_normal.png";
+	public static final String image_url_popup_exit_normal = "res/popup_exit_normal.png";
+	public static final String image_url_popup_exit_pressed = "/res/popup_exit_pressed.png";
+	public static final String image_url_popup_min_normal = "res/popup_min_normal.png";
+	public static final String image_url_popup_min_pressed = "/res/popup_min_pressed.png";
 	public static final String image_url_heart = "res/small_heart.png";
 	public static final String image_url_font_normal = "res/font_normal.png";
 	public static final String image_url_font_pressed = "res/font_pressed.png";
@@ -25,4 +29,7 @@ public class R {
 	public static final String image_url_screenshot_pressed = "res/screenshot_pressed.png";
 	public static final String image_url_videochat_normal = "res/videochat_normal.png";
 	public static final String image_url_videochat_pressed = "res/videochat_pressed.png";
+	public static final String image__popup_warn = "res/popup_warn.png";
+	public static final String image_slider_dot_normal = "res/slider_dot_normal.png";
+	public static final String image_slider_dot_pressed = "res/slider_dot_pressed.png";
 }
