@@ -41,16 +41,17 @@ public class ChatWnd extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("ChatWnd.fxml"));
 			Scene scene = new Scene(root,850,600);
 			primaryStage.getIcons().add(new Image(R.image_url_icon));
+			primaryStage.setTitle("CC,聊一聊");
 			scene.getStylesheets().add(getClass().getResource("chatStyle.css").toExternalForm());
 			// 系统托盘
 			if(SystemTray.isSupported()){
 				SystemTray tray = SystemTray.getSystemTray();
-				BufferedImage image = ImageIO.read(ChatWnd.class.getResourceAsStream(R.image_url_icon));
+				BufferedImage image = ImageIO.read(ChatWnd.class.getResourceAsStream(R.image_url_small_icon));
 				System.out.println(image);
 				PopupMenu popup = new PopupMenu();
-				MenuItem item = new MenuItem("退出NoBB");
+				MenuItem item = new MenuItem("退出CC");
 				popup.add(item);
-				TrayIcon trayIcon = new TrayIcon(image,"NoBB",popup);
+				TrayIcon trayIcon = new TrayIcon(image,"CC",popup);
 	            ActionListener listener = new ActionListener() {
 	                @Override
 	                public void actionPerformed(java.awt.event.ActionEvent arg0) {

@@ -97,7 +97,7 @@
 	-fx-image: url(/res/videochat_pressed.png);
 }
 /*设置输入框的样式 */
-#ta_input{
+.ta_input{
 	/*-fx-padding: 0px;
 	-fx-background-insets: 0px;
 	-fx-border-width: 0px;*/
@@ -114,4 +114,7 @@
 .textfield{
 	-fx-border-color: rgb(89,89,89);
 	-fx-border-width: 0.5px;
+}
+#listview{
+	-fx-background-image: url(/res/lv_bg.png);
 }

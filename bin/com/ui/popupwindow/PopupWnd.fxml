@@ -7,7 +7,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <VBox fx:id="vbox_root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-border-color: #898989; -fx-border-width: 0.5px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.popupwindow.PopupController">
    <children>
       <BorderPane id="border_titlebar" fx:id="border_titlebar" prefHeight="40.0" prefWidth="400.0">
@@ -46,7 +45,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label id="lb_subinfo" fx:id="lb_subinfo" prefHeight="50.0" text="建议你关注ltaoj，开放后会第一时间告诉你">
+                  <Label id="lb_subinfo" fx:id="lb_subinfo" prefHeight="50.0" text="建议您关注官网，开放后会第一时间告诉您" wrapText="true">
                      <font>
                         <Font size="13.0" />
                      </font>

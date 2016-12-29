@@ -2,6 +2,8 @@ package com.ui.messages;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 
 public class Message implements Serializable{
 
@@ -53,8 +55,8 @@ public class Message implements Serializable{
 	public ArrayList<User> getList() {
 		return list;
 	}
-	public void setList(ArrayList<User> list) {
-		this.list = list;
+	public void setList(HashMap<String, User> userList) {
+		this.list = new ArrayList<>(userList.values());
 	}
 	public ArrayList<User> getUsers() {
 		return users;

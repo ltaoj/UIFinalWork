@@ -1,7 +1,8 @@
 package com.ui.resource;
 
 public class R {
-	public static final String image_url_icon = "/res/head.png";
+	public static final String image_url_icon = "/res/logo.png";
+	public static final String image_url_small_icon = "/res/logo_small.png";
 	public static final String image_url_head = "res/head.png";
 	public static final String image_url_friend_normal = "res/tab_friend_normal.png";
 	public static final String image_url_friend_pressed = "res/tab_friend_pressed.png";
@@ -32,4 +33,8 @@ public class R {
 	public static final String image__popup_warn = "res/popup_warn.png";
 	public static final String image_slider_dot_normal = "res/slider_dot_normal.png";
 	public static final String image_slider_dot_pressed = "res/slider_dot_pressed.png";
+	public static final String image_myinfo_normal = "res/myinfo_normal.png";
+	public static final String image_myinfo_pressed = "res/myinfo_pressed.png";
+	public static final String image_small_team_logo = "res/small_team_logo.png";
+	public static final String image_lv_bg = "res/lv_bg.png";
 }

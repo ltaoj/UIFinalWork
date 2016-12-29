@@ -3,11 +3,11 @@ package com.ui.popupwindow;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.ui.chatwindow.ChatWnd;
 import com.ui.resource.R;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -23,11 +23,20 @@ public class PopupController implements Initializable{
 	@FXML ImageView iv_popup_exit;
 	@FXML ImageView iv_type;
 	@FXML BorderPane border_titlebar;
+
+	@FXML Label lb_title;
+	@FXML Label lb_info;
+	@FXML Label lb_subinfo;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		iv_popup_exit.setImage(new Image(R.image_url_popup_exit_normal));
 		iv_type.setImage(new Image(R.image__popup_warn));
 		setDragEnable(border_titlebar);
+		if(!PopupWnd.getContent().equals("")){
+			lb_title.setText(PopupWnd.getTitle());
+			lb_info.setText(PopupWnd.getContent());
+			lb_subinfo.setText(PopupWnd.getSubContent());
+		}
 	}
 	// exit imageview click action
 	public void exitIVAction(){

@@ -7,6 +7,7 @@ public class User implements Serializable {
 	String username;
     String picture;
     Status status;
+    String date;
 	public String getUsername() {
 		return username;
 	}
@@ -24,6 +25,12 @@ public class User implements Serializable {
 	}
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 
