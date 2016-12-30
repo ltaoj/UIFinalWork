@@ -28,8 +28,6 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -40,7 +38,6 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -274,6 +271,11 @@ public class ChatController implements Initializable{
 		stackReset();
 		vbox_space_list.setVisible(true);
 		bdpane_space.setVisible(true);
+		PopupWnd popupWnd = new PopupWnd();
+		popupWnd.setTitle("提示");
+		popupWnd.setContent("该页面代码还没生产出来");
+		popupWnd.setSubContent("项目会在https://github.com/ltaoj/UIFinalWork更新");
+		popupWnd.start(new Stage());
 	}
 	// 点击设置
 	public void settingIVAction() throws Exception{
@@ -368,6 +370,9 @@ public class ChatController implements Initializable{
 	}
 	public void sendFBTAction(){
 		PopupWnd popupWnd = new PopupWnd();
+		popupWnd.setTitle("提示");
+		popupWnd.setContent("该页面不能操作");
+		popupWnd.setSubContent("请点击左侧会话窗口操作");
 		popupWnd.start(new Stage());
 	}
 	// 将发送的消息添加到聊天面板上

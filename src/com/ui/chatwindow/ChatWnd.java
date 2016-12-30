@@ -99,13 +99,17 @@ public class ChatWnd extends Application {
 							@Override
 							public void run() {
 								if(e.getButton() == 1){
+									System.out.println(primaryStage.isIconified());
+									System.out.println(primaryStage.getX() + " "+primaryStage.getY());
 									if(primaryStage.isIconified()){
 										primaryStage.setIconified(false);
+										primaryStage.centerOnScreen();
 										primaryStage.show();
 									}else{
 										primaryStage.setIconified(true);
 										primaryStage.hide();
 									}
+									System.out.println(primaryStage.getWidth() + " "+primaryStage.getHeight());
 								}
 							}
 						});
